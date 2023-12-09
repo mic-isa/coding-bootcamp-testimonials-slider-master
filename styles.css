@@ -1,10 +1,5 @@
 
-/*
-=============== 
-Variables
-=============== Dark Blue: hsl(240, 38%, 20%)
-- Grayish Blue: hsl(240, 18%, 77%)
-*/
+/* =============== Variables =============== */
 :root {
     /* colors */
     --clr-white: hsl(0, 0%, 100%);
@@ -12,17 +7,12 @@ Variables
     --clr-dark-blue: hsl(240, 38%, 20%);
     --ff-secondary: 'Inter', sans-serif;
     --radius: 0.250rem;
-    --radius-1: 1.20rem;
+    --radius-1: .50rem;
     --max-width: 1170px;
     --fixed-width: 620px;
     --transition: all 0.3s linear;
 }
-
-/*
-=============== 
-Global Styles
-===============
-*/
+/* =============== Global Styles =============== */
 section{
     display: flex;
     flex-direction: column-reverse;
@@ -33,23 +23,23 @@ section{
     padding:0rem 2.2rem 0 2.3rem;
     min-height: 97vh;
     justify-content: space-evenly;
-    
 }
-*,
-::after,
-::before {
+*, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
+  background-image: url(images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: left bottom;
   font-family: var(--ff-secondary);
   background-color: var(--clr-white);
   line-height: 1.5;
   font-size: 0.875rem;
   min-height: 100vh;
   width: 100vw;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -58,35 +48,22 @@ body {
     position: absolute;
     z-index: -1;
 }
-
 .bg{
-    top:-1.08rem ;
-    /*left: ;*/
-    right: 2rem;
-   /* bottom: 0;*/
-    width: 80%;
+    top:-3.0rem ;
+    right: 1rem;
+    width: 97%;
 }
-.curve{
-    left:0 ;
-    bottom:0rem ;
-}
-
 .quotes{
     top: -1.5rem;
-    left:50% ;
-    right:-50% ;
-    /*bottom: ;*/
+    left:40% ;
     width: 20%;
 }
-
 .image-name{
     width: 70%;
     margin-left: 0rem;
     margin-top: 0;
     z-index: 0;
     border-radius: var(--radius-1);
-    padding: 1rem;
-    border-color: transparent;
 }
 
 .img-container{
@@ -95,26 +72,26 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    gap: 0;
 }
 .container{
     width: 100%;
     z-index: 1;
-    align-items: center;
-    justify-content: center;
     position: relative;
 }
 .button{
-    width: 13.5%;
-    margin-top: -02.081rem;
+    width: 17.5%;
+    margin-top: -1.5rem;
     z-index: 2;
     background-color: var(--clr-white);
     border-color: transparent;
-    border-radius: 01rem;
+    border-radius: 02rem;
     padding: 0.13rem;
+    box-shadow:0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 .icon-next,.icon-prev{
     padding:0.1rem 0.25rem;
-    width: 36%;
+    width: 40%;
 }
 #author{
     color: var(--clr-dark-blue);
@@ -137,16 +114,15 @@ body {
     font-weight: 600;
 }
 @media screen and (min-width: 800px) {
-.bg{
-    top:-4em ;
-    right: -1rem;
-    /*bottom: 10rem ;*/
-    width: 140%;
-}
-.quotes{
-        top: -3.5rem;
-        left:6rem ;
-        width: 20%;
+    .bg{
+        top:-4em ;
+        right: -1rem;
+        width: 140%;
+    }
+    .quotes{
+            top: -2.5rem;
+            left:6rem ;
+            width: 20%;
     }
     section{
         display: flex;
@@ -176,10 +152,8 @@ body {
     .img-container{
         width: 50%;
         display: flex;
-        align-items: flex-start;
-        
+        align-items: flex-start; 
     }
-    
     .container{
         width: 60%;
         z-index: 1;
@@ -190,26 +164,25 @@ body {
         z-index: 0;
         border-radius: var(--radius);
         padding: 0rem;
-        box-shadow: 0px 24px 28px rgba(0, 0, 0, 0.1);
     }
     .button{
-        width: 18%;
-        margin-top: -0.81rem;
-        
+        width: 20%;
+        margin-top: -01.0rem;
     }
     .icon-next,.icon-prev{
-        padding:0.1rem 0.5rem;
-        width: 45%;
+        padding:0.1rem 0.35rem;
+        width: 45.5%;
     }
 }
-
-
 .attribution {
      font-size: 16px; 
      text-align: center; 
-     position: relative;
-     left: 0%;
-     bottom: 0px
+     position: absolute;
+     position: absolute;
+     left: 50%;
+     bottom: 0px;
+     transform: translateX(-50%);
+     width: 80%;
     }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
